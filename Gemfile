@@ -47,6 +47,7 @@ gem 'coffee-rails', '~> 3.2.2'
 gem 'piwik_analytics', '~> 1.0.1'
 gem 'fog'
 gem 'rack-mini-profiler', '~> 0.1.23'
+gem 'roadie', '~> 2.3.4'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -60,7 +61,7 @@ end
 group :development, :test do
   gem 'thin', '~> 1.4.1'
   gem 'debugger', '~> 1.2.2'
-  gem 'factory_girl_rails', '~> 4.0'
+  gem 'factory_girl_rails', '~> 4.2.1'
   gem 'faker', '~> 1.0.1'
   gem 'rspec-rails', '~> 2.12.2'
   gem 'shoulda-matchers', '~> 1.2.0'

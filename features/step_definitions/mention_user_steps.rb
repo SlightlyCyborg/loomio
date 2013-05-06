@@ -35,7 +35,7 @@ end
 
 When /^I write and submit a comment that mentions harry$/ do
   fill_in 'new-comment', with: "hi @harry , do you like *markdown*?"
-  click_button 'post-new-comment'
+  click_on 'Post comment'
 end
 
 Then /^harry should get an email saying I mentioned him$/ do

@@ -38,7 +38,7 @@ Loomio::Application.configure do
       #enable_starttls_auto: true
     }
     config.action_mailer.default_url_options = {
-      :host           => 'johnsloomiotest.herokuapp.com', #looimo-staging.herokuapp.com',
+      :host           => 'looimo-staging.herokuapp.com',
     }
     config.action_mailer.perform_deliveries = true
 

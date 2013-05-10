@@ -1,7 +1,8 @@
 # RAILS_ENV=test TEST_EMAIL=mailcatcher rails runner lib/tasks/email_test.rb
 # RAILS_ENV=test TEST_EMAIL=sendgrid rails runner lib/tasks/email_test.rb
 
-include ERB::Util
+#NB if using sendgrid, you need to have SENDGRID_USERNAME and SENDGRID_PASSWORD defined
+
 require 'spec_helper'
 require 'faker'
 

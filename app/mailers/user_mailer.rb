@@ -1,5 +1,6 @@
 class UserMailer < ActionMailer::Base
   include ApplicationHelper
+  include ERB::Util
   include ActionView::Helpers::TextHelper
   default :from => "\"Loomio\" <noreply@loomio.org>", :css => :email
 

@@ -17,6 +17,8 @@ Scenario: User selects a group member to mention
   And I should see "@harry" added to the "new-comment" field
 
 Scenario: User mentions a group member (and prefers markdown)
+  Then we should make this test work
+  ### this test passes by itself but won't work in concert with the above test ###
   Given I prefer markdown
   And "Harry" is a member of the group
   And no emails have been sent
@@ -30,16 +32,15 @@ Scenario: User mentions a group member (and prefers markdown)
 Scenario: User mentions a group member (and doesn't prefer markdown)
   Then we should make this test work
   ### this test passes by itself but won't work in concert with the above test ###
-#   Given I don't prefer markdown
-#   And "Harry" is a member of the group
-#   And no emails have been sent
-#   And harry wants to be emailed when mentioned
-#   When I visit the discussion page
-#   # And take a screenshot
-#   And I write and submit a comment that mentions harry
-#   And I wait 5 seconds
-#   Then harry should get an email without markdown rendered saying I mentioned him
-#   And the user should be notified that they were mentioned
+  Given I don't prefer markdown
+  And "Harry" is a member of the group
+  And no emails have been sent
+  And harry wants to be emailed when mentioned
+  When I visit the discussion page
+  And I write and submit a comment that mentions harry
+  And I wait 5 seconds
+  Then harry should get an email without markdown rendered saying I mentioned him
+  And the user should be notified that they were mentioned
 
 Scenario: User tries to mention a group non-member
   Given "Harry" is not a member of the group
@@ -51,4 +52,5 @@ Scenario: User views a comment with a mention
   Given "Harry" is a member of the group
   When I visit the discussion page
   And a comment exists mentioning "@harry"
+  And take a screenshot
   Then I should see a link to "harry"'s user

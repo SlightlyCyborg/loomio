@@ -1,5 +1,3 @@
-include ERB::Util
-
 When /^I am adding a comment and type in "(.*?)"$/ do |arg1|
   fill_in 'new-comment', with: arg1
 end
@@ -28,7 +26,6 @@ Then /^I should see "(.*?)" added to the "(.*?)" field$/ do |text, field|
 end
 
 Then /^I should see a link to "(.*?)"\'s user$/ do |user|
-  # '
   visit(current_path)
   page.should have_link("@#{user}")
 end

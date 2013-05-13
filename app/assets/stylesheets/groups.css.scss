@@ -5,6 +5,24 @@
 @import "bootstrap/mixins";
 @import "mixins";
 
+.group_requests {
+  .main-container {
+    background: none;
+    margin-top: 10px;
+    padding: 0 0 20px;
+    .pull-right { margin-top: 34px; }
+    .page-container {
+      margin-top: 10px;
+
+      .page-container {
+      background: #ffffff;
+      box-shadow: 3px 3px 5px #eeeeee;
+      border: 1px solid #eeeeee;
+      padding: 34px; }
+    }
+  }
+}
+
 .group-title h2 {
   color: #777;
   display: inline;
@@ -288,7 +306,7 @@ input#user_email{
   float: left;
 }
 #users-list .admin-controls, #request-list .admin-controls {
-  float: right; 
+  float: right;
   text-align: right;
   font-size: $font-tiny;
   color: $mid-grey;
